@@ -1,0 +1,24 @@
+<!ELEMENT fabrica (piezas,motores,secciones,empleados)>
+<!ELEMENT piezas (pieza*)>
+<!ELEMENT pieza EMPTY>
+<!ATTLIST pieza 
+    idPieza ID #REQUIRED
+    compuesta IDREFS #IMPLIED>
+<!ELEMENT motores (motor+)>
+<!ELEMENT motor (trabajador+)>
+<!ATTLIST motor 
+    idMotor ID #REQUIRED
+    responsable IDREF #REQUIRED
+    piezas IDREFS #REQUIRED>  
+<!ELEMENT trabajador EMPTY>
+<!ATTLIST trabajador 
+    codTrab IDREF #REQUIRED
+    familiares IDREFS #IMPLIED>
+<!ELEMENT secciones (seccion+)>
+<!ELEMENT seccion (realiza+)>
+<!ATTLIST seccion codSec ID #REQUIRED>
+<!ELEMENT realiza EMPTY>
+<!ATTLIST realiza motor IDREF #REQUIRED>
+<!ELEMENT empleados (empleado+)>
+<!ELEMENT empleado EMPTY>
+<!ATTLIST empleado nif ID #REQUIRED>

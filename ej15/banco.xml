@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE banco SYSTEM "ej15.dtd">
+<banco>
+    <clientes>
+        <cliente nif="123456478I">
+            <cuenta id="1" permiso="titular"></cuenta>
+            <cuenta id="2" permiso="autorizado"></cuenta>
+            <prestamo num="2551"></prestamo>
+        </cliente>
+        <cliente nif="123456474N">
+            <cuenta id="1" permiso="autorizado"></cuenta>
+        </cliente>
+        <cliente nif="123456478I">
+            <cuenta id="2" permiso="tirular"></cuenta>
+        </cliente>
+    </clientes>
+    <sucursales>
+        <sucursal id="1254">
+            <cuentas_corrientes id="1">
+                <domiciliacion id="8"></domiciliacion>
+            </cuentas_corrientes>
+        </sucursal>
+        <sucursal id="5478">
+            <cuentas_corrientes id="2"/>
+        </sucursal>
+    </sucursales>
+</banco>

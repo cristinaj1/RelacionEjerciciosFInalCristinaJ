@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fabrica SYSTEM "motosol.dtd">
+<fabrica>
+    <piezas>
+        <pieza idPieza="p1" compuesta="p2 p3" />
+        <pieza idPieza="p2" />
+        <pieza idPieza="p3" />
+        <pieza idPieza="p4" />
+    </piezas>
+    <motores>
+        <motor idMotor="m1" responsable="_00000001F" piezas="p1 p4">
+            <trabajador codTrab="_00000001F" />
+            <trabajador codTrab="_00000002F" familiares="_00000003F _00000004F" />
+        </motor>
+        <motor idMotor="m2" responsable="_00000002F" piezas="p3">
+            <trabajador codTrab="_00000001F" />
+            <trabajador codTrab="_00000002F" familiares="_00000003F" />
+        </motor>
+        <motor idMotor="m3" responsable="_00000004F" piezas="p2">
+            <trabajador codTrab="_00000004F" />
+            <trabajador codTrab="_00000005F" familiares="_00000006F" />
+        </motor>
+    </motores>
+    <secciones>
+        <seccion codSec="s1">
+            <realiza motor="m1" />
+            <realiza motor="m3" />
+        </seccion>
+        <seccion codSec="s2">
+            <realiza motor="m3" />
+        </seccion>
+    </secciones>
+    <empleados>
+        <empleado nif="_00000001F" />
+        <empleado nif="_00000002F" />
+        <empleado nif="_00000003F" />
+        <empleado nif="_00000004F" />
+        <empleado nif="_00000005F" />
+        <empleado nif="_00000006F" />
+    </empleados>
+</fabrica>

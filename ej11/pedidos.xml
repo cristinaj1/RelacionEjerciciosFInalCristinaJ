@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE pedidos [
+    <!ELEMENT pedidos (Libro)>
+    <!ELEMENT Libro (Titulo, Contenido, Copyright)>
+    <!ATTLIST Libro id CDATA #REQUIRED>
+    <!ELEMENT Titulo (#PCDATA)>
+    <!ELEMENT Contenido (Capitulo, Separacion?)+>
+    <!ELEMENT Capitulo (Tema, Seccion+)>
+    <!ATTLIST Capitulo materia CDATA #IMPLIED>
+    <!ELEMENT Tema (#PCDATA)>
+    <!ELEMENT Seccion (#PCDATA)>
+    <!ATTLIST Seccion
+        apartados CDATA #REQUIRED
+        dificil CDATA #IMPLIED
+    >
+    <!ELEMENT Separacion EMPTY>
+    <!ELEMENT Copyright (#PCDATA)>
+]>
+<pedidos>
+    <Libro id="_1547">
+        <Titulo>Cien años de soledad</Titulo>
+        <Contenido>
+            <Capitulo materia="papel">
+                <Tema>Drama</Tema>
+                <Seccion apartados="14" dificil="Muy díficil">Novela</Seccion>
+            </Capitulo>
+        </Contenido>
+
+        <Copyright>Lo que sea</Copyright>
+    </Libro>
+</pedidos>
